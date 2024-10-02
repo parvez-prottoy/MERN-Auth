@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import { IoIosSearch } from "react-icons/io";
+import { useState } from "react";
 import { CiMenuFries } from "react-icons/ci";
+import { IoIosSearch } from "react-icons/io";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
 
   return (
-    <header className="bg-slate-200">
+    <header className="bg-gray-50">
       <nav className="container mx-auto flex items-center justify-between w-full relative boxShadow rounded-full py-[8px]">
         <Link to="/">
           <span className="text-xl font-bold">MERN.AUTH</span>
