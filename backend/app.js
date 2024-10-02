@@ -2,6 +2,10 @@ import cors from "cors";
 import express from "express";
 import morgan from "morgan";
 import connectDb from "./config/db.js";
+import {
+  errorHandler,
+  notFoundHandler,
+} from "./src/middlewares/error.middleware.js";
 
 const app = express();
 // note: connect db
@@ -13,5 +17,7 @@ app.use([
   express.json(),
   express.urlencoded({ extended: true }),
 ]);
+// note: error handler
+app.use(notFoundHandler, errorHandler);
 
 export default app;
