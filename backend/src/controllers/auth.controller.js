@@ -91,5 +91,17 @@ const getLogin = async (req, res) => {
     });
   }
 };
+/**
+ * @route   POST  /api/v1/users/logoutUser
+ * @access  public
+ * @desc    logout user
+ */
+const logoutUser = async (req, res) => {
+  res.cookie("access_token", "", {
+    httpOnly: true,
+    expires: new Date(0),
+  });
+  res.status(200).json({ message: "Logged out successfully" });
+};
 
-export { getLogin, postUser };
+export { getLogin, logoutUser, postUser };
