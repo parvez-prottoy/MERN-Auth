@@ -1,10 +1,11 @@
 import React from "react";
+import Home from "../components/Home";
 
 const HomePage = () => {
   return (
     <section>
       <div className="container mx-auto">
-        <h1>Home Page</h1>
+        <Home />
       </div>
     </section>
   );
