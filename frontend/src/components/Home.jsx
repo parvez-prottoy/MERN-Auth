@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div className="  mt-6 flex justify-center">
-      <div className="text-center bg-slate-100 p-6 rounded-lg">
+      <div className="text-center bg-gray-50 p-6 rounded-lg">
         <h1 className="text-2xl font-semibold">MERN Authentication</h1>
         <p className="w-[60%] mx-auto mt-2">
           This is a boilerplate for MERN authentication that stores a JWT in an

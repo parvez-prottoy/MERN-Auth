@@ -1,10 +1,11 @@
 import React from "react";
+import SignInForm from "../components/forms/SignInForm";
 
 const SignInPage = () => {
   return (
     <section>
       <div className="container mx-auto">
-        <h1>SignInPage</h1>
+        <SignInForm />
       </div>
     </section>
   );
