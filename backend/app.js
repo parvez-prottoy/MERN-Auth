@@ -6,6 +6,7 @@ import {
   errorHandler,
   notFoundHandler,
 } from "./src/middlewares/error.middleware.js";
+import indexRoute from "./src/routes/index.route.js";
 
 const app = express();
 // note: connect db
@@ -17,6 +18,8 @@ app.use([
   express.json(),
   express.urlencoded({ extended: true }),
 ]);
+// note: routes
+app.use("/", indexRoute);
 // note: error handler
 app.use(notFoundHandler, errorHandler);
 
